@@ -194,15 +194,128 @@
     \end{block}
 \end{frame}
 
-\subsection{Zuteilung der Projekte}
+\subsection{Bewertung}
 \begin{frame}
-  \frametitle{Zuteilung der Projekte}
-  \begin{enumerate}
-    \item Verteilen der Listen
-    \item Maximal 2x Eintragen
-    \item Wünsche bitte über Anmerkung notieren
-    \item Zuteilung erfolgt heute!
-  \end{enumerate}
+    \frametitle{Bewertungsschema}
+    umfasst
+    \begin{enumerate}
+        \item Quellcode
+        \item Dokumentation
+        \item Präsentationen
+        \item Abschluss
+    \end{enumerate} bezüglich der Meilensteine
+    \begin{block}{Meilensteine}
+        \begin{description}
+            \item[M1] Arithmetik
+            \item[M2] \texttt{print} Anweisung und Verzweigungen
+            \item[M3] Schleifen und Arrays
+        \end{description}
+    \end{block}
+\end{frame}
+
+\subsection{Repositories}
+\begin{frame}
+    \frametitle{Verwaltung des SWPs auf GitHub}
+    Link zur GitHub Organisation für das SWP:
+    \url{https://github.com/organizations/swp-uebersetzerbau-ss13}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[height=2cm]{githuboctacat}
+  \end{center}
+\end{column}
+    \begin{column}{0.5\textwidth}
+  \begin{block}{Repositories}
+      \begin{enumerate}
+          \item Ein \emph{allgemeines Repository} für projektübergreifende
+              \begin{itemize}
+                  \item Dokumentation
+                  \item Beispiele
+                  \item Tests
+                  \item Interfaces
+              \end{itemize}
+          \item \emph{jede} Gruppe erhält eigenes Repository für ihre
+              Implementierung
+      \end{enumerate}
+  \end{block}
+\end{column}
+  \end{columns}
+\end{frame}
+
+\section{Git Primer}
+\begin{frame}
+    \frametitle{Einführung in git}
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+  \begin{center}
+    \includegraphics[width=3cm]{git_logo}
+  \end{center}
+\end{column}
+    \begin{column}{0.7\textwidth}
+  \begin{block}{Was ist git?}
+      \begin{enumerate}
+          \item Versionsverwaltung von Dateien, insbesondere für Quellcode
+          \item freie Software
+          \item geeignet für kleine bis große Projekte
+          \item kann nur nur lokal (auf einem Rechner) oder stark verteilt
+              genutzt werden
+          \item viele große Open Source Projekte nutzen git
+      \end{enumerate}
+  \end{block}
+\end{column}
+  \end{columns}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Wichtige Befehle für die Arbeit mit git}
+    \begin{enumerate}
+        \item Lokale Kopie vom Repository anlegen:
+            \begin{verbatim}
+            $ git clone <repo>
+            \end{verbatim}
+        \item Revision ansehen:
+            \begin{verbatim}
+            $ git show <rev number>
+            \end{verbatim}
+        \item Lokalen Veränderungen (noch ohne commit) ansehen:
+            \begin{verbatim}
+            $ git status
+            \end{verbatim}
+        \item Commit auf lokalem Repo:
+            \begin{verbatim}
+            $ git commit -m "message" -a|<file>|<dir>
+            \end{verbatim}
+        \item Veränderungen vom remote Repo ziehen:
+            \begin{verbatim}
+            $ git pull origin <branch>
+            \end{verbatim}
+        \item Eigene Commits auf remote Repo hoch laden:
+            \begin{verbatim}
+            $ git push origin <branch>
+            \end{verbatim}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Befehle zur Verwaltung von Branches}
+    \begin{enumerate}
+        \item Erstelle einen neuen Branch (und wechsle zu ihm):
+            \begin{verbatim}
+            $ git checkout -b <branch>
+            \end{verbatim}
+        \item Zeige alle verfügbaren Branches:
+            \begin{verbatim}
+            $ git branch -a
+            \end{verbatim}
+        \item Wechsele vom aktuellen Branch zu angegeben:
+            \begin{verbatim}
+            $ git checkout <branch>
+            \end{verbatim}
+        \item Merge von aktuellen Branch mit angegeben:
+            \begin{verbatim}
+            $ git merge <branch>
+            \end{verbatim}
+    \end{enumerate}
 \end{frame}
 
 \section{Ende}
@@ -214,24 +327,6 @@
     \includegraphics[height=5cm]{compilers}
     \ 
   \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Weiteres Vorgehen}
-  \begin{enumerate}
-    \item Gruppeneinfindung
-      \begin{itemize}
-        \item interne Treffen organisieren
-        \item Ansprechpartner für Tim und Max
-        \item Erste Konzepte entwerfen: Interfaces, Beispielsyntax, \dots
-        \item Probleme festhalten
-        \item Absprache mit anderen Teams?
-      \end{itemize}
-    \item Repository einrichten
-    \item Quellsprache verstehen
-    \item LLVM näher kennen lernen
-    \item Literatur konsultieren
-  \end{enumerate}
 \end{frame}
 
 % All of the following is optional and typically not needed. 
@@ -256,17 +351,18 @@
   \bibitem[Fin]{FindBugsWeb}
     {F}ind{B}ugs -- {F}ind {B}ugs in {J}ava {P}rograms.
     \newblock {\url{http://findbugs.sourceforge.net/}}.
+  
+   \bibitem[GitHub]{GitHubWeb}
+    {G}it{H}ub
+    \newblock {\url{https://github.com/}}.
 
+   \bibitem[GitRef]{GitRefWeb}
+       {G}it {R}eference
+    \newblock {\url{http://gitref.org/}}.
 
-  \bibitem[LA04]{Lattner04}
-    Chris Lattner and Vikram~S. Adve.
-    \newblock {LLVM}: {A} compilation framework for lifelong program analysis \&
-      transformation.
-      \newblock In {\em CGO}, pages 75--88. IEEE Computer Society, 2004.
-
-    \bibitem[Lat02]{Lattner00diss}
-      Chris~Arthur Lattner.
-      \newblock {LLVM}: An infrastructure for multi-stage optimization, 2002.
+   \bibitem[GitNotes]{GitNotesWeb}
+       {S}ome {N}otes on {G}it
+    \newblock {\url{http://java.dzone.com/articles/some-notes-git}}.
 
     \bibitem[Sco09]{Scott09}
       Michael~Lee Scott.
