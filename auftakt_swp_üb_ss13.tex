@@ -33,7 +33,7 @@
 \author{Till~Zoppke \and Maximilian~Konzack \and Yves~Müller}
 \institute[FU Berlin]{Freie Universität Berlin}
 
-\date{Auftaktsveranstaltung am 13.~April 2013}
+\date{Auftaktveranstaltung am 13.~April 2013}
 
 
 % you can redefine the text shown in the footline. use a combination of
@@ -70,10 +70,9 @@
   \frametitle{Modularer Compiler}
   \begin{block}{Idee}
     \begin{itemize}
-      \item Arbeit an einem Übersetzer
-      \item viele kleine Teilprojekte für Compilerkette
+      \item Implementierung eines Übersetzers
+      \item soll im Rahmen der Übersetzerbau genutzt werden können
       \item Quellsprache ist imperativ und statisch typisiert
-      \item Zwischencode kann von anderen Compilern genutzt werden
     \end{itemize}
   \end{block}
 
@@ -85,16 +84,37 @@
 \end{column}
     \begin{column}{0.7\textwidth}
   \begin{block}{Ziele}
-    \begin{enumerate}
-      \item Kommunikation zwischen den Teilprojekten!
-      \item Modulare Komponenten für die Teilprojekte
-      \item LLVM als Zwischencode
-      \item Absprache von Schnittstellen
-      \item Implementierungssprache ist Java
-    \end{enumerate}
+      \begin{description}
+          \item[modular] Abgrenzung gegenüber anderen Modulen
+          \item[einfach] Verwendbarkeit mit anderen Komponenten
+          \item[getestet] Black- und Whiteboxtests
+          \item[dokumentiert] im Quellcode und als Text
+      \end{description}
   \end{block}
 \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Veranschaulichung der zu erstellenden Artefakte}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{pipeline}
+    \end{center}
+    \begin{itemize}
+        \item bekannte Aufteilung in Front- und Backend
+        \item Projektmanagement bezogene Artefakte
+            \begin{enumerate}
+                \item Präsentationen
+                \item Dokumentation
+            \end{enumerate}
+        \item Visualisierung als GUI und/oder Commandline Interface von
+            \begin{enumerate}
+                \item abstrakter Syntax (AST) als ASCII, xml, SVG, \dots
+                \item drei Adresscode als Text, Tripel-, Quadrupeldarstellung,
+                    \dots
+                \item anderen Ergebnissen: Interpreter, Debugger, \dots
+            \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 \section{Vorstellung der Projekte}
