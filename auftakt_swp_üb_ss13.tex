@@ -132,6 +132,11 @@
     \begin{block}{Organisation}
         \begin{itemize}
             \item grundsätzlich frei gestellt
+            \item zwei unterschiedlichen Zielcode:
+                \begin{enumerate}
+                    \item Java Bytecode
+                    \item LLVM, GNU Assembler, \dots
+                \end{enumerate}
             \item jedoch legen wir Wert auf:
                 \begin{enumerate}
                     \item Inkrementelle Software Entwicklung
@@ -152,22 +157,85 @@
   \begin{block}{Treffen aller Teilnehmer}
     \begin{itemize}
       \item alle zwei Wochen
-      \item donnerstags von 14 bis 16 Uhr c.t.
+      \item donnerstags von 14 bis 16 Uhr c.t. im SR~049
       \item bei zu vielen Fehlterminen wird Anwesenheitspflicht eingeführt!
       \item von jedem Teilnehmer wird erwartet mindestens \emph{1x} zu
           präsentieren
     \end{itemize}
   \end{block}
-  $\Rightarrow$ andere Woche für projektinterne Treffen vormerken!
+  $\Rightarrow$ andere Woche für Statusbericht und projektinterne Treffen vormerken!
 
   \begin{block}{Zweck der Projekttreffen}
     \begin{enumerate}
         \item Arbeitsfortschritt
+        \item Wissensaustausch
         \item Projektmanagement
         \item Visualisierung der Ergebnisse
         \item Probleme, Fragen, Diskussion, \dots
     \end{enumerate}
   \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vorgaben zu den Präsentationen}
+    \begin{block}{Allgemeines}
+        \begin{itemize}
+            \item Dauer eines Vortrags $\approx$ 15~Minuten
+                \begin{itemize}
+                    \item 10 Minuten davon für Präsentation
+                    \item 5 Minute für Fragen vorsehen
+                \end{itemize}
+            \item im Zweifel weniger Folien sind besser!
+        \end{itemize}
+    \end{block}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Präsentation zum Meilenstein}
+               Fokus auf Projektalltag:
+               \begin{enumerate}
+                   \item Projektstruktur
+                   \item Status zum Meilenstein
+                   \item Aufgabenverteilung
+                   \item Projektmanagement
+                   \item Demonstration des Compilers
+                   \item \dots
+               \end{enumerate}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Fachvortrag}
+               Fokus auf Wissensaustausch. Mögliche Themen:
+               \begin{enumerate}
+                   \item Aufbau und Struktur von Java Bytecode
+                   \item git (Branch und Merge Strategien, Issues, \dots)
+                   \item Design Patterns (Visitor, Interpreter,
+                       Factory, \dots)
+                   \item JUnit
+               \end{enumerate}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Statusbericht über Meilenstein}
+    \begin{itemize}
+        \item kurzer Status Strukturierung des Meilensteins
+        \item wenn \emph{kein Projekttreffen} ist
+    \end{itemize}
+        \begin{block}{Was wollen wir sehen?}
+            mind. 1 Punkt aus folgenden:
+            \begin{itemize}
+                \item Offene und abgeschlossene Tickets/Issues
+                \item To-Do-Liste
+                \item Projektverlaufsplan
+                \item Mündlicher Bericht
+                \item \dots
+            \end{itemize}
+        \end{block}
+        \begin{block}{Was \emph{nicht}?}
+            alles was im Vortrag zum Meilenstein gehört
+        \end{block}
 \end{frame}
 
 \subsection{Bürozeiten der Betreuer}
@@ -216,8 +284,8 @@
 \subsection{Repositories}
 \begin{frame}
     \frametitle{Verwaltung des SWPs auf GitHub}
-    Link zur GitHub Organisation für das SWP:
-    \url{https://github.com/organizations/swp-uebersetzerbau-ss13}
+    GitHub Organisation für das SWP:
+    \url{https://github.com/swp-uebersetzerbau-ss13}
   \begin{columns}
     \begin{column}{0.5\textwidth}
   \begin{center}
