@@ -29,7 +29,7 @@
 % image to be shown on the title page (without file extension, should be pdf or png)
 \titleimage{fu_500}
 
-\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
 
 \title{SWP Übersetzerbau im SS 13}
 \subtitle{Einführung und Organisatorisches}
@@ -308,6 +308,9 @@
   \end{block}
 \end{column}
   \end{columns}
+  \begin{block}{Mailingliste vom Softwareprojekt}
+      Email:~\email{swp-uebersetzerbau-ss13@lists.spline.inf.fu-berlin.de}
+  \end{block}
 \end{frame}
 
 \section{Git Primer}
@@ -375,7 +378,7 @@
             \begin{verbatim}
             $ git branch -a
             \end{verbatim}
-        \item Wechsele vom aktuellen Branch zu angegeben:
+        \item Wechsle vom aktuellen Branch zu angegeben:
             \begin{verbatim}
             $ git checkout <branch>
             \end{verbatim}
@@ -430,7 +433,6 @@
     \newblock {\em Compiler: {P}rinzipien, {T}echniken und {W}erkzeuge}.
     \newblock Pearson Studium, 2. edition, 2008.
 
-
   \bibitem[Fin]{FindBugsWeb}
     {F}ind{B}ugs -- {F}ind {B}ugs in {J}ava {P}rograms.
     \newblock {\url{http://findbugs.sourceforge.net/}}.
@@ -438,6 +440,10 @@
    \bibitem[GitHub]{GitHubWeb}
     {G}it{H}ub
     \newblock {\url{https://github.com/}}.
+
+   \bibitem[CodeSchool]{TryGit}
+    {C}ode {S}chool -- {T}ry {G}it
+    \newblock {\url{http://try.github.io}}.
 
    \bibitem[GitRef]{GitRefWeb}
        {G}it {R}eference
